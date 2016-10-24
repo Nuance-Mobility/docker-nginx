@@ -1,13 +1,13 @@
-FROM 		nuancemobility/ubuntu-base:14.04
-MAINTAINER 	Brice Argenson <brice.argenson@nuance.com>
+FROM 		nuancemobility/ubuntu-base:16.10
+MAINTAINER  sspcm <mobility-sspcm@nuance.com>
 
 RUN 		apt-get update -y && \
 			apt-get install -y libxml2-dev libxslt-dev gcc git libssl-dev make libldap2-dev && \
 			cd /tmp && \
-			curl -O http://nginx.org/download/nginx-1.6.0.tar.gz && \
-			tar -xf nginx-1.6.0.tar.gz && \
-			rm nginx-1.6.0.tar.gz && \
-			mv nginx-1.6.0 nginx_src && \
+			curl -O http://nginx.org/download/nginx-1.10.2.tar.gz && \
+			tar -xf nginx-1.10.2.tar.gz && \
+			rm nginx-1.10.2.tar.gz && \
+			mv nginx-1.10.2 nginx_src && \
 			curl -O  -L http://downloads.sourceforge.net/project/pcre/pcre/8.21/pcre-8.21.tar.gz && \
 			tar -xzf pcre-8.21.tar.gz && \
 			rm pcre-8.21.tar.gz && \
